@@ -1,0 +1,26 @@
+PROD_NAME,DESCRIPTION,CATEGORY,QTY_ON_HAND,PROD_NUM,PACKAGED_WITH
+2 GB Memory E,2 GB Memory ECC,Ram,3000,87655,manual:heatsink
+4 GB Memory E,4 GB Memory ECC,Ram,1000,87659,manual:heatsink
+16 GB Memory E,16 GB Memory ECC,Ram,238,87634,manual
+500 GB HD J,500 GB HD Panther Brand,HD,200,45628,atacable:manual
+500 GB HD T,500 GB HD Tiger Brand,HD,498,45641,satacable:manual
+1 TB HD J,1 TB HD Jargon Brand,HD,231,45691,
+4 Core CPU J3,4 Core CPU Jargon Brand 3 GHZ ,CPU,50,98820,thermalpaste:heatsink:manual
+2 Core CPU J2,2 Core CPU Jargon Brand 2  GHZ ,CPU,118,98838,thermalpaste:heatsink
+1 Core CPU J2,1 Core CPU Jargon Brand 2  GHZ ,CPU,203,98792,thermalpaste:heatsink
+94F991 MB,Motherboard F991 CPU,MB,19,282299,
+94G822 MB,Motherboard G822 CPU,MB,30,282109,
+93H772 MB,Motherboard H772 CPU,MB,15,282009,cables:screws
+93G Video,Video Card Jargon Brand 93G,Video,80,99202,dvd:manual:game
+84G1 Video,Video Card Jargon Brand 84F1,Video,14,99207,dvd:manual:hdmicable
+09K Video,Video Card Tiger Brand 84F1,Video,5,98243,manual:game
+J Case 1500,Computer Case Jargon Brand Style 1500,Case,20,77623,fans:manual:screws
+J Case 1501,Computer Case Jargon Brand Style 1501,Case,18,77624,fans:manual:screws
+T Case 4332,Computer Case Tiger Brand Style 4332,Case,7,88211,fans:manual:screws:watercooler
+J Power 300W,Power Supply Jargon Brand 300 Watts,Power,28,92387,cables:screws
+J Power 500W,Power Supply Jargon Brand 500 Watts,Power,17,92373,cables:screws
+T Power 300W,Power Supply Tiger Brand 300 Watts,Power,8,93347,cables:screws
+DVD J INT,DVD Jargon Brand Internal,Optical,23,88734,manual
+DVD J EXT,DVD Jargon Brand External,Optical,45,88821,
+DVD T INT,DVD Tiger Brand Internal,Optical,19,82331,satacable:manual
+DVD T EXT,DVD Tiger Brand External,Optical,17,82337,satacable:manual
