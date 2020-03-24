@@ -94,6 +94,8 @@ object Demo {
 
     val ap_df = ele.select("*").where("state =='Andhra Pradesh'")
     ap_df.groupBy("state","constituency").agg(max("total")).sort("constituency").show(100)
+
+
     spark.close()
   }
 }
