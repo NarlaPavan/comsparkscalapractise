@@ -36,8 +36,28 @@ object Demo {
 
     df3.printSchema()
 
+
+    //selecting distinct status
+    df3.select("status").distinct().show()
+
+    //filter
+    df3.where("city == 'Bigcity'").show()
+
+    //distinct
+    df3.select("city").distinct().show()
+
+    //modify data of the column
+    df3.withColumn("city", when(col("city") === "Smallcity", 0).otherwise(10)).show()
+
     df3.show(10)
 
+    // new column
+    df3.withColumn("citygroup",when(col("custid")>= 1 and col("custid") <= 1000,"oldcustomer").when(col("custid") >= 1001 and col("custid") <= 2000,"midcustomer").otherwise("newcustomers")).show()
+
+    //modify column name
+    df3.withColumnRenamed("city","cities").show
+
+    
     spark.close()
   }
 }
