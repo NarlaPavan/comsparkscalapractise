@@ -81,6 +81,19 @@ object Demo {
 
     df_csv2.printSchema()
 
+    val ele = spark.read.option("inferSchema", "true").option("delimiter","\t").option("header",true).csv("C:\\Users\\narla\\IdeaProjects\\comsparkscalapractise\\src\\main\\resources\\elections2014.tsv")
+
+    ele.show(15)
+
+    //grouping operations
+// state|constituency|      candidate_name| sex| age|category|partyname|   partysymbol|general|postal| total|pct_of_total_votes|pct_of_polled_votes|totalvoters|
+
+    ele.groupBy(col("state"),col("partyname")).agg(sum("total") as "total_votes").sort("state","partyname").show
+
+    ele.select("state","partyname").where("state == 'Andhra Pradesh'").groupBy("state","partyname").agg(count("*") as "count").sort("count","partyname").show(100)
+
+    val ap_df = ele.select("*").where("state =='Andhra Pradesh'")
+    ap_df.groupBy("state","constituency").agg(max("total")).sort("constituency").show(100)
     spark.close()
   }
 }
