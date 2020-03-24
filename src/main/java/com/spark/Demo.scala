@@ -3,7 +3,7 @@ package com.spark
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
-import org.apache.spark.sql.types.{IntegerType, StringType}
+import org.apache.spark.sql.types._
 
 object Demo {
   def main(args: Array[String]): Unit = {
@@ -52,12 +52,35 @@ object Demo {
     df3.show(10)
 
     // new column
-    df3.withColumn("citygroup",when(col("custid")>= 1 and col("custid") <= 1000,"oldcustomer").when(col("custid") >= 1001 and col("custid") <= 2000,"midcustomer").otherwise("newcustomers")).show()
+    df3.withColumn("citygroup", when(col("custid") >= 1 and col("custid") <= 1000, "oldcustomer").when(col("custid") >= 1001 and col("custid") <= 2000, "midcustomer").otherwise("newcustomers")).show()
 
     //modify column name
-    df3.withColumnRenamed("city","cities").show
+    df3.withColumnRenamed("city", "cities").show
 
-    
+    df3.withColumn("newzip", col("zip") + 10).show
+
+    df3.withColumn("age", lit(10)).show
+
+    val prod = spark.read.option("header", "true").csv("C:\\Users\\narla\\IdeaProjects\\comsparkscalapractise\\src\\main\\resources\\Product.csv")
+
+    prod.show()
+
+    val df_csv1 = spark.read.option("inferSchema", "true").csv("C:\\Users\\narla\\IdeaProjects\\comsparkscalapractise\\src\\main\\resources\\csvfile1")
+
+    df_csv1.show
+
+    df_csv1.printSchema()
+
+    val sch = StructType(
+      StructField("id1",FloatType)
+        ::StructField("id2",FloatType)
+        ::StructField("id3",FloatType)
+        ::Nil)
+
+    val df_csv2 = spark.read.option("inferSchema", "true").schema(sch).csv("C:\\Users\\narla\\IdeaProjects\\comsparkscalapractise\\src\\main\\resources\\csvfile1")
+
+    df_csv2.printSchema()
+
     spark.close()
   }
 }
