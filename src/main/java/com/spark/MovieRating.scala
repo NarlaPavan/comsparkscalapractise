@@ -21,7 +21,8 @@ object MovieRating {
       .withColumn("time", split(col("_c0"), "::").getItem(3).cast(LongType))
       .drop(col("_c0"))
     rating_df1.persist()
-//    print(rating_df1.count())
+
+ //    print(rating_df1.count())
 //    rating_df1.show()
 //    rating_df1.printSchema()
 

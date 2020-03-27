@@ -29,8 +29,8 @@ object CovidAnalysis {
     val covid_df1 = covid_df.withColumn("Date",to_timestamp(col("Date"),"MM/dd/yy"))
 
     val covid_grp = covid_df1.groupBy(dayofmonth(col("Date")) as "day",month(col("Date")) as "month").agg(sum(col("Confirmed")) as "Total_Confirmed",sum(col("Deaths")) as "Total_Deaths").sort(col("month"),col("day"),col("Total_Confirmed"))
-    covid_grp.write.csv("C:\\Users\\narla\\Desktop\\covid_data")
+//    covid_grp.write.csv("C:\\Users\\narla\\Desktop\\covid_data")
 //    covid_df1.printSchema()
-    covid_df1.show(20)
+    covid_grp.show(200)
   }
 }
