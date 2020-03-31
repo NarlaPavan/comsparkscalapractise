@@ -1,6 +1,8 @@
 package com.spark
 
 import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql.types._
 
 object CaseStudy1 {
   def main(args: Array[String]): Unit = {
@@ -30,12 +32,15 @@ object CaseStudy1 {
 
     })
 
-    rd4.saveAsTextFile("C:\\Users\\narla\\Desktop\\joutput")
+//    rd4.saveAsTextFile("C:\\Users\\narla\\Desktop\\joutput")
 //    val rdd1 = spark.sparkContext.wholeTextFiles("C:\\Users\\narla\\Desktop\\joutput\\").values
     val df1 = spark.read.json("C:\\Users\\narla\\Desktop\\joutput\\")
 
-
     df1.show(10)
+    df1.printSchema()
+
+    val df2 = df1.select("*").groupBy("categoryId").agg(sum("viewCount"))
+    df2.show(40)
     spark.close()
   }
 }
