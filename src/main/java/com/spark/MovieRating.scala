@@ -43,7 +43,7 @@ object MovieRating {
 
     spark.sql("select * from ratings1 limit 10").show()
 
-
+    rating_df4.write.parquet("C:\\Users\\narla\\Desktop\\parquet")
   }
 
   def epochToTimestamp(epochMills: Long): String = {
