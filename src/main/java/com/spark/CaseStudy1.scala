@@ -25,15 +25,15 @@ object CaseStudy1 {
         val data = x.replace("\"viewCount\"", "{\"viewCount\"")
         val data1 = data.replace("}}", "}")
         data1
-      }else{
+      } else {
         val data = x.replace("\"viewCount\"", "{\"viewCount\"")
         data
       }
 
     })
 
-//    rd4.saveAsTextFile("C:\\Users\\narla\\Desktop\\joutput")
-//    val rdd1 = spark.sparkContext.wholeTextFiles("C:\\Users\\narla\\Desktop\\joutput\\").values
+    //    rd4.saveAsTextFile("C:\\Users\\narla\\Desktop\\joutput")
+    //    val rdd1 = spark.sparkContext.wholeTextFiles("C:\\Users\\narla\\Desktop\\joutput\\").values
     val df1 = spark.read.json("C:\\Users\\narla\\Desktop\\joutput\\")
 
     df1.show(10)
