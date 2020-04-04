@@ -49,6 +49,24 @@
             <artifactId>spark-streaming-kafka-0-10_2.12</artifactId>
             <version>2.4.5</version>
         </dependency>
+
+<!--
+        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-twitter &ndash;&gt;
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-twitter_2.11</artifactId>
+            <version>1.6.3</version>
+        </dependency>
+-->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.bahir/spark-streaming-twitter -->
+        <dependency>
+            <groupId>org.apache.bahir</groupId>
+            <artifactId>spark-streaming-twitter_2.12</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+
     </dependencies>
+
 
 </project>
