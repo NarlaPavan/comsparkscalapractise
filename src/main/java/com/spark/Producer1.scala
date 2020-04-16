@@ -11,7 +11,7 @@ object Producer1 {
     log.setLevel(Level.INFO)
     val props = new Properties()
 
-    props.put("bootstrap.servers","192.168.172.130:9092")
+    props.put("bootstrap.servers","192.168.172.131:9092")
     props.put("acks","all")
     props.put("client.id","ProducerApp")
     props.put("retries","4")
@@ -19,15 +19,15 @@ object Producer1 {
     props.put("key.serializer","org.apache.kafka.common.serialization.StringSerializer")
     props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer")
 
-    val topic = "topicZ"
+    val topic = "topic2"
 
     val producer = new KafkaProducer[String,String](props)
-    val msg:String  = "Welcome to Kafka"
+    val msg:String  = "Welcome to Kafka- - "
 
-//    for (i <- 1 to 10){
-      val data = new ProducerRecord[String,String](topic,msg)
+    for (i <- 1 to 10){
+      val data = new ProducerRecord[String,String](topic,msg+i.toString)
       producer.send(data)
-//    }
+    }
     producer.close()
     println("-------------------Sucessfully published message to topic : "+topic+"----------------")
   }
