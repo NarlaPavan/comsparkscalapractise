@@ -34,24 +34,30 @@
             <artifactId>spark-streaming_2.12</artifactId>
             <version>2.4.5</version>
         </dependency>
-<!--
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8 &ndash;&gt;
-        <dependency>
-            <groupId>org.apache.spark</groupId>
-            <artifactId>spark-streaming-kafka-0-8_2.11</artifactId>
-            <version>2.4.5</version>
-        </dependency>
--->
+        <!--
+                &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8 &ndash;&gt;
+                <dependency>
+                    <groupId>org.apache.spark</groupId>
+                    <artifactId>spark-streaming-kafka-0-8_2.11</artifactId>
+                    <version>2.4.5</version>
+                </dependency>
+        -->
 
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-10 -->
-        <dependency>
+<!--        <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming-kafka-0-10_2.12</artifactId>
             <version>2.4.5</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>2.4.1</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-twitter -->
 <!--
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-twitter &ndash;&gt;
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-streaming-twitter_2.11</artifactId>
@@ -72,6 +78,30 @@
             <artifactId>spark-streaming-flume_2.12</artifactId>
             <version>2.4.5</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
+        <!--
+                <dependency>
+                    <groupId>org.scala-lang</groupId>
+                    <artifactId>scala-library</artifactId>
+                    <version>2.12.0</version>
+                </dependency>
+        -->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
+<!--        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.13.1</version>
+            <scope>test</scope>
+        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.30</version>
+        </dependency>
+
 
     </dependencies>
 
